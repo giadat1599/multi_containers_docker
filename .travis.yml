@@ -1,0 +1,15 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t giadat1599/react-test -f ./client/Dockerfile.dev ./client
+
+script:
+  - docker run giadat1599/react-test npm run test
+
+after_success:
+  - docker build -t giadat1599/multi_client ./client
+  - docker build -t giadat1599/multi_nginx ./nginx
+  - docker build -t giadat1599/multi_server ./server
+  - docker build -t giadat1599/multi_worker ./worker
