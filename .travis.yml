@@ -13,3 +13,8 @@ after_success:
   - docker build -t giadat1599/multi_nginx ./nginx
   - docker build -t giadat1599/multi_server ./server
   - docker build -t giadat1599/multi_worker ./worker
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker push giadat1599/multi_client
+  - docker push giadat1599/multi_nginx
+  - docker push giadat1599/multi_server
+  - docker push giadat1599/multi_worker
