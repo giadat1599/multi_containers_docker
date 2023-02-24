@@ -7,4 +7,5 @@
 4. **Worker** will listen to **redis server** for any changes by using subscription and do some logics there
 
 ## Deployment workflow
-![deployment_workflow_for_multi_containers drawio](https://user-images.githubusercontent.com/114280300/221237940-f4aa17ea-99c3-46e3-95e6-f5e061a39fbc.png)
+
+![deployment_workflow_for_multi_containers drawio](https://user-images.githubusercontent.com/114280300/221238419-58452957-2035-4172-95f3-3f9d2e74fc01.png)
