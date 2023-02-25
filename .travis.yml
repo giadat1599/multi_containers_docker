@@ -18,3 +18,15 @@ after_success:
   - docker push giadat1599/multi_nginx
   - docker push giadat1599/multi_server
   - docker push giadat1599/multi_worker
+
+deploy:
+  provider: elasticbeanstalk
+  region: 'ap-northeast-1'
+  app: 'multi-docker'
+  env: 'Multidocker-env'
+  bucket_name: 'elasticbeanstalk-ap-northeast-1-760038101556'
+  bucket_path: 'multi-docker'
+  on:
+    branch: main
+  access_key_id: '$AWS_ACCESS_KEY'
+  secret_access_key: '$AWS_SECRET_KEY'

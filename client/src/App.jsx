@@ -16,9 +16,9 @@ function App() {
             <img src={reactLogo} className="logo react" alt="React logo" />
           </a>
           <Link to="/">Home</Link>
-          <Link to="/otherpage">Other Page</Link>
+          <Link to="/otherpage">Next Page</Link>
         </div>
-        <h1>Vite + React</h1>
+        <h1>Fibonnaci(Vite + React) </h1>
         <div>
           <Routes>
             <Route path="/" element={<Fibonacci />} />
